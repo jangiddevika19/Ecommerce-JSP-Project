@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f3ef; /* same as login/register/products */
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Success Box */
+.success-box {
+    width: 380px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #faf6f0; /* same as card/form-box background */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.4s;
+}
+.success-box:hover { transform: scale(1.03); }
+
+/* Checkmark Circle */
+.checkmark-circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Green Background */
+.background {
+    width: 100px;
+    height: 100px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    animation: pop 0.4s ease forwards;
+}
+
+/* Tick */
+.checkmark {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    animation: draw 0.5s ease forwards;
+}
+
+/* Animations */
+@keyframes pop { 0% { transform: scale(0); } 100% { transform: scale(1); } }
+@keyframes draw { 0% { height: 0; width: 0; } 100% { height: 50px; width: 25px; } }
+
+/* Text */
+h2 { color: #ff6b35; margin-bottom: 15px; } /* accent color same as logo/button */
+p { color: #555; margin: 10px 0 20px 0; font-size: 14px; }
+
+/* Continue Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #ea4c89, #ff6b35); /* same as other buttons */
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234,76,137,0.5);
+}
+
+/* Confetti */
+.confetti-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-container span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    top: -10px;
+    animation: fall 3s linear infinite;
+}
+
+/* Confetti Colors */
+.confetti-container span:nth-child(1) { left: 10%; background: #ea4c89; animation-delay: 0s; }
+.confetti-container span:nth-child(2) { left: 20%; background: #ff6b35; animation-delay: 0.5s; }
+.confetti-container span:nth-child(3) { left: 30%; background: #ffd11a; animation-delay: 1s; }
+.confetti-container span:nth-child(4) { left: 40%; background: #4CAF50; animation-delay: 1.5s; }
+.confetti-container span:nth-child(5) { left: 50%; background: #00ccff; animation-delay: 2s; }
+.confetti-container span:nth-child(6) { left: 60%; background: #ea4c89; animation-delay: 0.3s; }
+.confetti-container span:nth-child(7) { left: 70%; background: #ff6b35; animation-delay: 0.8s; }
+.confetti-container span:nth-child(8) { left: 80%; background: #ffd11a; animation-delay: 1.3s; }
+.confetti-container span:nth-child(9) { left: 90%; background: #4CAF50; animation-delay: 1.8s; }
+.confetti-container span:nth-child(10){ left: 95%; background: #00ccff; animation-delay: 2.3s; }
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}

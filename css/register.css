@@ -1,0 +1,118 @@
+@charset "UTF-8";
+ /* BODY */
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: #f5f3ef; /* soft warm cream, easy on eyes */
+    color: #1a1a1a;       /* dark text for readability */
+}
+
+/* CENTER CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* FORM BOX */
+.form-box {
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: #faf6f0; /* slightly darker warm cream */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08); /* soft shadow */
+    text-align: center;
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.form-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* HEADING */
+.form-box h2 {
+    color: #ea4c89; /* bright pink accent */
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* SUBTITLE */
+.subtitle {
+    color: #555;  /* dark gray subtitle */
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* INPUT FIELDS */
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    background: #fdf9f2; /* soft cream input */
+    color: #1a1a1a;
+
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+.form-box input:focus {
+    border-color: #ea4c89; /* pink glow */
+    box-shadow: 0 0 8px rgba(234,76,137,0.4);
+}
+
+/* SUBMIT BUTTON */
+.form-box input[type="submit"] {
+    background: linear-gradient(90deg, #ea4c89, #ff6b35);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.form-box input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(234,76,137,0.6);
+}
+
+/* LOGIN LINK */
+.form-box .login-link {
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+.form-box .login-link a {
+    color: #ff6b35; /* orange link */
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.form-box .login-link a:hover {
+    text-decoration: underline;
+    color: #ea4c89; /* pink on hover */
+}
+
+/* RESPONSIVE */
+@media (max-width: 420px) {
+    .form-box {
+        width: 90%;
+        padding: 25px;
+    }
+}

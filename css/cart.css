@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f3ef; /* same as login/register/products */
+    color: #1a1a1a;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff6b35; /* accent color */
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #555;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff6b35;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* HEADING */
+.container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ff6b35;
+}
+
+/* EMPTY CART MESSAGE */
+.empty-msg {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+}
+
+/* CART GRID */
+.cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #faf6f0; /* same as form-box */
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff6b35;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: linear-gradient(90deg, #ea4c89, #ff6b35);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234,76,137,0.5);
+}
+
+/* TOTAL BOX */
+.total-box {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff3e0;
+    border: 1px solid #ffae00;
+    box-shadow: 0 5px 15px rgba(255,165,0,0.2);
+}
+
+.total-box h3 {
+    font-size: 22px;
+    color: #ff6b35;
+    margin-bottom: 15px;
+}

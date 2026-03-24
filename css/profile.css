@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f3ef; /* same warm cream as register/login */
+    color: #1a1a1a;
+}
+
+/* Center container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profile Card */
+.profile-box {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #faf6f0; /* same as form-box */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.4s;
+}
+
+.profile-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* Heading */
+.profile-box h2 {
+    color: #ea4c89; /* same accent as register */
+    margin-bottom: 20px;
+}
+
+/* Text */
+.profile-box p {
+    font-size: 16px;
+    margin: 15px 0;
+    color: #555; /* dark gray text same as forms */
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ea4c89, #ff6b35); /* same gradient */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(234,76,137,0.5);
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .profile-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
